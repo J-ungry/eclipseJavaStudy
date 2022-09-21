@@ -1,0 +1,61 @@
+package ch01.ex01.quiz.case04;
+
+import java.util.Scanner;
+
+public class Score {
+
+	Scanner sc = new Scanner(System.in);
+	String name[];
+	int kor[];
+	int eng[];
+	int math[];
+	
+	int nowArray = 0;
+	
+	int menu() {
+		System.out.println("1. 입력 ");
+		System.out.println("2. 출력 ");
+		System.out.println("0. 프로그램 종료 ");
+		
+		int menuNum = sc.nextInt();
+		
+		return menuNum;
+	}
+	
+	void makeArr(int a) {
+		name= new String[a];
+		kor= new int[a];
+		eng = new int[a];
+		math= new int[a];
+		
+		
+	}
+	
+	void input() {
+		System.out.print("이름 > ");
+		name[nowArray] = sc.next();
+		System.out.print("국어 > ");
+		kor[nowArray] = sc.nextInt();
+		System.out.print("수학 > ");
+		math[nowArray] = sc.nextInt();
+		System.out.print("영어 > ");
+		eng[nowArray] = sc.nextInt();
+		
+		nowArray ++;
+	}
+	
+	void output() {
+		for(int i=0; i<nowArray; i++) {
+			
+				System.out.println("이름 > "+name[i]);
+				System.out.println("총점 > "+(kor[i]+eng[i]+math[i]));
+				System.out.println("평균 > "+(kor[i]+eng[i]+math[i])/3.0);
+				System.out.println();
+			
+			
+			
+		}
+	}
+	
+	
+}

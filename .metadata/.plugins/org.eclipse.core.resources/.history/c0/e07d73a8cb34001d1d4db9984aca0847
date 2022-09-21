@@ -1,0 +1,37 @@
+package java_study.co.kr.joongbu.case01;
+
+import java.util.ArrayList;
+import java.util.List;
+
+//제네릭 정의할땐 이렇게 해야한다 보통은 타입을 바꾼다 해서 T, 두개를 바꿈면 TP 이렇게 함 
+class GenericTest<T>{
+	T name;
+	
+	public GenericTest(T name) {
+		this.name = name;
+	}
+}
+public class L07Generic {
+
+	public static void main(String[] args) {
+		
+		GenericTest a = new GenericTest(13);
+		System.out.println(a.name);
+		GenericTest<Integer> a2 = new GenericTest<Integer>(200);
+		
+		
+		
+		List<Integer> list = new ArrayList<Integer>(); //기본형은 제네릭으로 사용할 수 없다 !!! 참조형만 된다나 뭐라나 ~
+		//list.add("1");
+		//Integer 는 int의랩펔 클래스
+		//랩퍼클래스가 하ㅏ는 일 (Byte,Short,Integer,Long,Float.Double.Character) !!!암기하자 !!!!!
+		//1. 형변환 Integer.parseInt("13");
+		//2. 기본 데이터타입의 정보를 포함 Integer.MAX_VALUE
+		//3. 제네릭 타입 으로 사용 된다 .
+		list.add(1);
+		list.add(20);
+		list.add(300);
+		System.out.println(list);
+	}
+
+}

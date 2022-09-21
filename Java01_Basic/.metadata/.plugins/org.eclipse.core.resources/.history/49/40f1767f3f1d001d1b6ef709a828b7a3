@@ -1,0 +1,10 @@
+package ch01.ex01.quiz.case01;
+
+public class Info {
+
+	double height;
+	double weight;
+	String name;
+	int age;
+	
+}

@@ -1,0 +1,26 @@
+package ch01.ex02.quiz.case06Answer;
+
+import java.util.Scanner;
+
+import ch01.ex02.quiz.case06.Score;
+
+public class ScoreService {
+
+	Scanner sc = new Scanner(System.in);
+	
+	public int menu() {
+		System.out.println("1. 입력");
+		System.out.println("2. 출력");
+		System.out.println("3. 수정");
+		System.out.println("4. 삭제");
+		System.out.println("0. 프로그램 종료");
+		System.out.print("선택 >> ");
+		int num = sc.nextInt();
+		return num;
+	}
+
+	public void input(Score[] s) {
+		// TODO Auto-generated method stub
+		
+	}
+}

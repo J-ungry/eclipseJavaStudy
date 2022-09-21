@@ -1,0 +1,22 @@
+package ch03.ex03.case02;
+
+import ch03.quiz.case02.presentation.Io;
+import ch03.quiz.case02.service.Service;
+import ch03.quiz.case02.service.ServiceEng;
+import ch03.quiz.case02.service.ServiceKor;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Service serviceKor = new ServiceKor(); //service 로 한게 연결통로가 되게된다 
+		Service serviceEng = new ServiceEng();
+		
+		Io io = new Io(serviceKor);
+		io.greet();
+		
+		io.setService(serviceEng);
+		io.greet();
+	}
+
+}

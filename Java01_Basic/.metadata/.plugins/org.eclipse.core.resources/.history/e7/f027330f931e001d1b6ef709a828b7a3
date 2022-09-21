@@ -1,0 +1,31 @@
+package ch01.ex01.quiz.case06;
+
+public class Lotto {
+
+	public static void main(String[] args) {
+
+		Ball ball = new Ball(); //공 저장하는 배열 ??? , 오름차순 정렬 ??
+		Slot slot = new Slot(); //공 뽑는 거 ??
+		Console console = new Console(); //공을 계속 뽑을까요 ??
+		
+		int nowNum = 0;
+		
+		char check = 0;
+		
+		do {
+			//공 뽑기 !
+			int nowBall = slot.choiceBall();
+			ball.saveBall(nowNum,nowBall);
+			
+			check = console.inChar("공을 계속 뽑을까요 ?");
+			if (nowNum==5) {
+				break;
+			}
+			//계속 뽑을까요 ?
+			nowNum ++;		
+		}while(check=='Y'||check=='y');
+		
+		System.out.println("공을 6개 모두 뽑았습니다");
+	}
+
+}

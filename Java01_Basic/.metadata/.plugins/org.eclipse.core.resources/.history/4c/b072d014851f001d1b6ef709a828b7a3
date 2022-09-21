@@ -1,0 +1,19 @@
+package ch01.ex02.quiz.case06;
+
+import java.util.ArrayList;
+
+public class ScoreService {
+	
+	private ArrayList<Score> arrayList; //create field
+	
+	//생성자 
+	public ScoreService() {
+		arrayList = new ArrayList<Score>(); //객체 생
+	}
+	
+	//method
+	public void addScore(Score score) { //입력 받은거 추가하기 
+		arrayList.add(score);
+	}
+
+}

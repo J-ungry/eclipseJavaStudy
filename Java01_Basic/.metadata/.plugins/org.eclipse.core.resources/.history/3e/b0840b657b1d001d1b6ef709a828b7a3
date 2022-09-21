@@ -1,0 +1,16 @@
+package ch01.ex01.quiz.case02;
+
+import java.time.LocalDate;
+import java.time.LocalTime;
+
+public class OrderInfo {
+
+	int registNum;
+	String phoneNum;
+	String address;
+	LocalDate orderDate = LocalDate.now();
+	LocalTime orderTime = LocalTime.now();
+	int price;
+	int menuNum;
+
+}

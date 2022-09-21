@@ -1,0 +1,48 @@
+package ch03.quiz.project02.presentation.employee;
+
+import java.util.Scanner;
+
+import ch03.quiz.project02.domain.Employee;
+import ch03.quiz.project02.presentation.Console;
+import ch03.quiz.project02.service.EmployeeService;
+
+public class EmployeeIo {
+	
+	Scanner sc = new Scanner(System.in);
+	private EmployeeService employeeService;
+	private String[] empMenuItem;
+	private int id = 0;
+	//생성자 
+	public EmployeeIo(EmployeeService employeeService, String[] empMenuItem) {
+		this.employeeService = employeeService;
+		this.empMenuItem = empMenuItem;
+	}
+	
+	public void play() {
+		while(true) {
+			
+			switch(Console.menu(empMenuItem)) {
+			case 1:
+				Employee employee = new Employee();// 객체 생성 
+				employee.setId(id++);
+				System.out.print("이름 입력하기 >> ");
+				employee.setName(sc.next());
+				System.out.println("입사일 입력하기 ex)980310 >> ");
+				employee.setDate(sc.next());
+				employeeService.addEmployee(employee); //생성한거 arrayList 에 넣기 
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 0:
+				System.out.println("프로그램 종료");
+				return;
+			}
+		}
+
+	}
+
+}

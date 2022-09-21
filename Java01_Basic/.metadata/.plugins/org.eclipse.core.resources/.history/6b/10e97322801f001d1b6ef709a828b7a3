@@ -1,0 +1,13 @@
+package ch01.ex02.arrayList.case04;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		MemberArrayList list = new MemberArrayList();
+		Member m1 = new Member(1, "m1");
+		
+		list.addMember(m1);
+	}
+
+}

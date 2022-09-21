@@ -1,0 +1,43 @@
+package java_study.co.kr.joongbu.case01;
+
+class ObjectA{
+	String a = "ObjectA.a 입니동 ";
+}
+
+class ObjectB extends ObjectA{
+	String b = "ObjectB.b 입니동 ";
+}
+
+class ObjectC extends ObjectB{
+	String c = "ObjectC.c 입니동 ";
+}
+
+
+//상속을 한 타입을 자식이라고 하고 상속을 한 타입을 부모라고 한다 
+public class L05ExtendsAndType {
+
+	public static void main(String[] args) {
+
+		//상속은 타입의 다형성을 만든다.
+		ObjectC c = new ObjectC();
+		System.out.println(c.a);
+		System.out.println(c.b);
+		System.out.println(c.c);
+		
+		ObjectB b = c; //b 는 b 만큼만 참조를 한다 
+		System.out.println(b.a);
+		System.out.println(b.b);
+//		System.out.println(b.c);  에러가 난다 !!
+	
+		ObjectA a = c;
+		System.out.println(a.a);
+//		System.out.println(a.b);  
+//		System.out.println(a.c);
+		
+		//c 가 참조하는 객체가줄어드는 걸까용 ? => 객체는그대로지만 해당하는 타입만큼만 참조하는것이다 
+		Object o=c;
+		
+		ObjectC oc = (ObjectC)o;
+	}
+
+}

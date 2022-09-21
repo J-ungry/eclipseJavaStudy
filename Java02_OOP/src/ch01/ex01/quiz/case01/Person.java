@@ -1,0 +1,17 @@
+package ch01.ex01.quiz.case01;
+
+public class Person {
+
+	public static void main(String[] args) {
+		Info tomy = new Info();
+		
+		tomy.height = 170.0;
+		tomy.weight = 65.0;
+		tomy.name = "Tomy";
+		tomy.age = 30;
+		tomy.gender = "남성";
+		
+		tomy.showInfo();
+	}
+
+}

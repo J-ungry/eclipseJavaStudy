@@ -1,0 +1,19 @@
+package ch02.ex02.quiz.quiz02;
+
+public class Worker {
+
+	String workerName;
+	int money;
+	
+	public Worker(String workerName) { //초기화 시켜주기 
+		this.workerName = workerName;
+		money = 10_000; //
+	}
+	
+	public void takeBus() {}
+	public void takeTaxi() {}
+	
+	public void showWorkerInfo() {
+		System.out.printf("%s 님의 잔액은 %d 원 입니다. ",workerName,money);
+	}
+}

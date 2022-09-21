@@ -1,0 +1,10 @@
+package ch01.ex01.quiz.case06;
+
+public class ConsoleAnswer {
+
+	public static char inYn(String string) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

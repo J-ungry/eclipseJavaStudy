@@ -1,0 +1,5 @@
+package ch03.quiz.project02Answer.service.employee;
+
+public class EmployeeServiceImpl {
+
+}

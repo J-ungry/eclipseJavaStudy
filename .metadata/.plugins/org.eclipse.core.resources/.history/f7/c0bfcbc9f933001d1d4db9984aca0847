@@ -1,0 +1,69 @@
+package ch03.quiz.project02.presentation.employee;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import ch03.quiz.project02.domain.Employee;
+import ch03.quiz.project02.presentation.Console;
+import ch03.quiz.project02.service.EmployeeService;
+
+public class EmployeeIo {
+	
+	Scanner sc = new Scanner(System.in);
+	private EmployeeService employeeService;
+	private String[] empMenuItem;
+	private int id = 0;
+	//생성자 
+	public EmployeeIo(EmployeeService employeeService, String[] empMenuItem) {
+		this.employeeService = employeeService;
+		this.empMenuItem = empMenuItem;
+	}
+	
+	public void play() {
+		ArrayList<Employee> employees =null;
+		while(true) {
+			
+			switch(Console.menu(empMenuItem)) {
+			case 2:
+				Employee employee = new Employee();// 객체 생성 
+				employee.setId(++id);
+				System.out.print("이름 입력하기 >> ");
+				employee.setName(sc.next());
+				System.out.println("입사일 입력하기 ex)980310 >> ");
+				employee.setDate(sc.next());
+				employeeService.addEmployee(employee); //생성한거 arrayList 에 넣기 
+				break;
+			case 1:
+				employees = employeeService.getEmployees(); //어레이 담아주기 
+				
+				Console.showInfo("ID\t이름\t입사일\t");
+				System.out.println("--------------------------------------");
+				if(employees.size()==0) { //만약 내용이 없다면 
+					System.out.println("안에 내용이 없쪄요 ");
+					return;
+				}
+				for(Employee e : employees) {
+					System.out.println(e);
+				}
+				break;
+			case 3:
+//				employees = employeeService.getEmployees();
+//				if(employees.size()==0) { //만약 내용이 없다면 
+//					System.out.println("안에 내용이 없쪄요 ");
+//					return;
+//				}
+//				
+//				int id = sc.nextInt();
+//				for()
+				break;
+			case 4:
+				break;
+			case 0:
+				System.out.println("프로그램 종료");
+				return;
+			}
+		}
+
+	}
+
+}

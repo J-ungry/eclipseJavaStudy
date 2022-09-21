@@ -1,0 +1,15 @@
+package ch01.ex02.quiz.Case03Answer;
+
+import java.util.Scanner;
+
+public class GroupService {
+
+	Scanner sc = new Scanner(System.in);
+	
+	public int size() {
+		System.out.print("입력할 그룹 수 >> ");
+		int gCnt = sc.nextInt();
+		return gCnt;
+		
+	}
+}

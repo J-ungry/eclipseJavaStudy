@@ -1,0 +1,88 @@
+Q1. case01 패키지를 생성해 아래 내용을 수행하세요 
+1) Template 클래스 생성(추상 클래스)
+- 추상메소드 : input(Object[] o), output(Score[] s), modify(), delete();
+-Scanner , int cnt =0 ;
+
+ 2) Score 클래스 생성 
+ -필드 : 국어 영어 수학 총점 평균 
+ 
+ 3) ScoreMain 클래스 생성 
+ -입력 출력 수정 삭제 
+ 
+ 4) ScoreService 클래스 생성 
+ - Tamplate 클래스를 상속받아 구현하기 !!
+ 
+ Q2. case02 패키지를 생성해 아래 내용을 수행
+ 
+ Q3. case03 패키지를 생성해 아래 내용을 수행 
+ 1) Score  //field : 이름 , 학과 , 점수   /clear !
+ 2) ScoreService // 입력 , 출력 , 수정 , 삭제 (점수와 관련해서 )   
+ 3) Professor //field : 학과 , 교수명  /clear!
+ 4) ProfessorService // 입력, 출력, 수정, 삭제 (교수와 관련해서) 
+ 5) Main // 1. 성적관리 2. 교수진 관리
+ 6) MainService // 각 메소드 별로 각 서비스 (Score/Professor) 로 분개하느 ㄴ역할 
+ 
+ 실행시 1. 입 2. 출 . 3. 수 4. 삭  => 입력시 1. 학생입  2. 교수입 .. . . 이런식으로 
+ 
+ 
+ Q3. case03 패키지 생성해 아래 내용을 수행하세요 
+ 
+ 1)AbstractExam 클래스 //추상 method :menu() , input(),output()  //check
+ 
+ 2)User 클래스 생성 //필드 : id,pw  //check
+ 
+ 3)Member 클래스 생성 // field : name,email //check 
+ 
+ 4) UserService, MemberService
+ -Service 클래스들은 AbstractExam 클래스를 상속해서 사용한다 
+ 
+ 5)Main 클래스 생성 // 사용자, 회원을 각각 실행하는 클래스 / MainService에서 구현 
+ 
+ 6) MainService 클래스 //Main 기능 구현 AbstractExam 상속하기 
+ 
+ 
+ Q4. case04 패키지를 생성해, 아래 내용을 수행하세요.
+	
+1. 시나리오
+- Player가 있고, Player는 GameLevel 속성을 가집니다.
+- 각 GameLevel 단계마다 run(), jump(), turn() 세 가지 기능이 업그레이드 된다.
+  > 초보자 레벨: 천천히 달립니다. run()만 가능
+  > 중급자 레벨: 빠르게 달리고, 점프할 수 있습니다. run(), jump() 가능
+  > 고급자 레벨: 엄청 빠르게 달리고, 높게 점프하고, 턴할 수 있습니다. run(), jump(), turn() 가능
+- Player는 한번에 하나의 레벨 상태만 가질 수 있습니다.
+- Player가 play() 중에 레벨이 있는 go(int count)라는 메소드를 호출하면,
+  run()하고 count횟수만큰 jump()하고 turn()합니다.
+  
+2. 클래스 생성
+1) Player 클래스
+  - 필드: level
+  - 메소드: getLevel(), upgradeLevel(PlayerLevel), play()
+2) PlayerLevel 클래스(추상 클래스)
+  - 추상 메소드: run(), jump(), turn(), showLevelMessage()
+  - 템플릿 메소드: go(int)
+3) BeginnerLevel, AdvancedLevel, SuperLevel 구현 클래스
+4) MainBoardPlay 클래스(실행용)
+
+3. 기타
+- Player와 PlayerLevel은 포함 관계(Has-A)이다.
+- PlayerLevel과 3개의 구현 클래스들은 상속 관계(Is-A)이다.
+- 템플릿 메소드를 사용하여 출력 내용과 같이 실행 흐름 구현
+
+4. 출력 내용은 아래와 같다.
+===== 초급자 레벨입니다. =====
+천천히 달립니다.
+jump 못하지롱
+turn 못하지롱
+===== 중급자 레벨입니다. =====
+빨리 달립니다.
+높이 jump합니다.
+높이 jump합니다.
+turn 못하지롱
+===== 고급자 레벨입니다. =====
+엄청 빠르게 달립니다.
+아주 높이 jump합니다.
+아주 높이 jump합니다.
+아주 높이 jump합니다.
+turn 합니다.
+
+5. 

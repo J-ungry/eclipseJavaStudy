@@ -1,0 +1,8 @@
+package ch01.ex01.quiz.case06;
+
+public class LottoAnswer {
+
+	public static void main(String[] args) {
+		
+	}
+}

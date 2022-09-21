@@ -1,0 +1,23 @@
+package java_study.co.kr.joongbu.case01;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class L23FileWriter {
+
+	public static void main(String[] args) {
+
+		FileWriter fw = null; //문자열을파일로 출력하는 객체 
+		BufferedWriter bw = null; //보조 스트림 
+		
+		try {
+			fw = new FileWriter("newFile.txt");
+			System.out.println("work");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

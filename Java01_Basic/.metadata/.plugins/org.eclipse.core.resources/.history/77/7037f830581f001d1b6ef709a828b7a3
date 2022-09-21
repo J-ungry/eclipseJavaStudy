@@ -1,0 +1,9 @@
+package ch02.ex02.case02;
+
+import java.util.Scanner;
+
+public class Farmer {
+
+	Scanner s = new Scanner(System.in);
+	Apple a = new Apple();
+}

@@ -1,0 +1,14 @@
+package ch03.ex03.case05.presentation.score;
+
+import ch03.ex03.case05.service.score.ScoreService;
+
+public class ScoreIo {
+
+	private ScoreService scoreService;
+
+	public ScoreIo(ScoreService scoreService) {
+		this.scoreService = scoreService;
+	}
+	
+	
+}

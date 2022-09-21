@@ -1,0 +1,12 @@
+package ch02.ex02.quiz.quiz02;
+
+public class Worker {
+
+	String workerName;
+	int money;
+	
+	public Worker(String workerName) { //초기화 시켜주기 
+		this.workerName = workerName;
+		money = 10_000; //
+	}
+}

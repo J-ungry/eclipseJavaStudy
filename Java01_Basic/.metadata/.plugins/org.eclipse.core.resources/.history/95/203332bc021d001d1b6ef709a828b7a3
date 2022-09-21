@@ -1,0 +1,23 @@
+package ch05.quiz;
+
+// 가게에 간 철수는 8370원 어치 물건을 구매하였다.
+//철수에게는 500 , 100 , 50 , 10 원 짜리 동전이 각 20개씩 있다. 
+//철수는 금액을 지불할 때 단위가 큰 동전을 지불하려고 한다. 
+//철수가 지불하게 되는 각 동전의 개수를 구하시오 
+
+public class A02Greedy {
+
+	public static void main(String[] args) {
+		int coin[] = new int[] {500,100,50,10};
+		int cost = 8370;
+		
+		for(int i: coin) {
+			int cnt = cost/i;
+			//cnt = cost/i;
+			System.out.printf("%d 는 %d 개 필요합니다",i,cnt);
+			cost = cost % i;
+			System.out.println(cost);
+		}
+	}
+
+}

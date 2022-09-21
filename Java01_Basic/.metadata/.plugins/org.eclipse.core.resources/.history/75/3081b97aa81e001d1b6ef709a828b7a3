@@ -1,0 +1,27 @@
+package ch01.ex02.quiz.Case03Answer;
+
+public class GroupMain {
+
+	public static void main(String[] args) {
+		
+		GroupService gs = new GroupService();
+		Group[] g = new Group[gs.size()];
+		
+		while(true) {
+			int menu= gs.menu();
+			
+			switch(menu) {
+			case 0:
+				System.out.println("프로그램 종료 ");
+				return;
+				
+			case 1:
+				
+			case 2:
+			default:
+				System.out.println("다시 선택해라 빠가야로 꼬노야로 ! ");
+			}
+		}
+	}
+
+}

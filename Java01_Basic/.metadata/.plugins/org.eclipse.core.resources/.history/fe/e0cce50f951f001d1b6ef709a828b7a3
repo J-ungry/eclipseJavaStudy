@@ -1,0 +1,48 @@
+package ch01.ex02.quiz.case07;
+
+import java.util.Scanner;
+
+public class StudentService {
+	
+	Scanner sc = new Scanner(System.in);
+
+	public int menu() {
+		System.out.println("1. 입력");
+		System.out.println("2. 출력");
+		System.out.println("3. 수정");
+		System.out.println("4. 삭제");
+		System.out.println("0. 프로그램 종료");
+		System.out.print("선택 >> ");
+		int num = sc.nextInt();
+		return num;
+	}
+	
+	public int input(int cnt,Student[] s) {
+		if(cnt ==3) {
+			System.out.println("더이상 저장 할 수 없습니다 ");
+		}else {
+			s[cnt] = new Student();
+			System.out.print("학번 입력 >> ");
+			s[cnt].studentNum = sc.nextInt();
+			System.out.print("이름 입력 >> ");
+			s[cnt].name = sc.next();
+			System.out.print("전공 입력 >> ");
+			s[cnt].major = sc.next();
+			cnt ++;
+		}
+		return cnt;
+	}
+	
+	public void output(int cnt,Student[] s) {
+		if(cnt==0){
+			System.out.println("출력 할 내용이 없어용가링 ~ ");
+		} else {
+			for(int i=0; i<cnt; i++) {
+				System.out.println("학번 : "+s[i].studentNum);
+				System.out.println("이름 : "+s[i].name);
+				System.out.println("전공 : "+s[i].major);
+			}
+		}
+	}
+
+}

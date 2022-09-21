@@ -1,0 +1,28 @@
+package ch01.ex02.quiz.Case03;
+
+import java.util.Scanner;
+
+public class GroupMain {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("입력할 그룹 수 > ");
+		int groupCnt = sc.nextInt();
+		boolean check = true;
+		
+		Group[] g = new Group[groupCnt];
+		GroupService gs = new GroupService();
+		
+		do {
+			int menuNum = gs.menu();
+			switch(menuNum) {
+			case 0:
+				System.out.println("프로그램 종료");
+				check = false;
+			}
+		}while(check);
+		
+	}
+
+}

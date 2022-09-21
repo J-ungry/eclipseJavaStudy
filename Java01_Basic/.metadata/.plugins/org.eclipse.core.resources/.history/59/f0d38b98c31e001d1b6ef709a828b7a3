@@ -1,0 +1,24 @@
+package ch01.ex02.quiz.case05;
+
+import java.util.Scanner;
+
+public class BookService {
+
+	Scanner sc= new Scanner(System.in);
+	
+	public int input() {
+		System.out.print("등록할 책 개수 입력 >>");
+		return sc.nextInt();
+	}
+	
+	public int menu() {
+		System.out.println("1. 등록 ");
+		System.out.println("2. 출력 ");
+		System.out.println("0. 프로그램 종료 ");
+		
+		System.out.print("선택 >>");
+		return sc.nextInt();
+	}
+	
+	
+}

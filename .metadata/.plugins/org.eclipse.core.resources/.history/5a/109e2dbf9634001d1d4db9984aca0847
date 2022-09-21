@@ -1,0 +1,28 @@
+package java_study.co.kr.joongbu.case01;
+
+import java.util.ArrayList;
+
+//class 이름 규칙 : 파스칼 표기법 (이름을 표기할때 사용) , 숫자로 시작하면 안됨 
+//
+public class L01Variable {
+	//메소드 이름 규칙 : 카멜 표기법 , 숫자로 시작하면 안됨 
+	//메인 메소드 규칙 : public (어디서든 접근 가능) , static( 정적인 jvm(main) < jre 스택에서 참조됨) , void (반환되는게 없음 실행 자체가 반환이니까 ) , args (main이 실행될때 지정되는 기본값 )
+	public static void main(String[] args) { //파라미터(매개변수)
+		
+		String[] arr = {"a","b","c","d"}; //Array 배열 
+		System.out.println(arr.length);
+		System.out.println(arr.toString());
+		
+		ArrayList<String> list = new ArrayList<String>(); //List 배열 
+		list.add("a");
+		list.add("b");
+		list.add("c");
+		list.add("d");
+		
+		System.out.println(list.toString());
+		System.out.println(list.size());
+		System.out.println(list.contains("c"));
+
+	}
+
+}

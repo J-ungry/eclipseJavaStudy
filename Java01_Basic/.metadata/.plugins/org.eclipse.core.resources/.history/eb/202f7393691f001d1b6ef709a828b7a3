@@ -1,0 +1,14 @@
+package ch02.ex02.quiz.quiz02;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Worker a = new Worker("A");
+		Worker b = new Worker("B");
+		
+		a.showWorkerInfo();
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package ch03.quiz.project02Answer.presentation;
+
+public interface Console {
+
+}

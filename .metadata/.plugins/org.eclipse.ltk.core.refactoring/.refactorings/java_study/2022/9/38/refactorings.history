@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;java_study.co.kr.joongbu.case01.L05ExtendsType&apos; to &apos;L05ExtendsAndType&apos;&#x0A;- Original project: &apos;java_study&apos;&#x0A;- Original element: &apos;java_study.co.kr.joongbu.case01.L05ExtendsType&apos;&#x0A;- Renamed element: &apos;java_study.co.kr.joongbu.case01.L05ExtendsAndType&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;L05ExtendsType&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;java_study.co.kr.joongbu.case01{L05ExtendsType.java[L05ExtendsType" matchStrategy="1" name="L05ExtendsAndType" qualified="false" references="true" similarDeclarations="false" stamp="1663223904847" textual="false" version="1.0"/>
+</session>

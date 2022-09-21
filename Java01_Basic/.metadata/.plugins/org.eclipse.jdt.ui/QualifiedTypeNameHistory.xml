@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.w3c.dom.ls.LSOutput"/>
+    <fullyQualifiedTypeName name="java.time.LocalTime"/>
+    <fullyQualifiedTypeName name="ch01.ex01.quiz.case03.Student"/>
+    <fullyQualifiedTypeName name="javax.xml.transform.Source"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.io.Console"/>
+    <fullyQualifiedTypeName name="ch01.ex02.quiz.Case03Answer.GroupService"/>
+    <fullyQualifiedTypeName name="ch01.ex02.quiz.Case04.StudentService"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+    <fullyQualifiedTypeName name="ch02.ex01.case02.Student"/>
+    <fullyQualifiedTypeName name="ch02.ex01.case03.Student"/>
+    <fullyQualifiedTypeName name="ch02.ex02.case01.Basket"/>
+    <fullyQualifiedTypeName name="ch02.ex02.case02.Farmer"/>
+    <fullyQualifiedTypeName name="ch02.ex02.case02.Retailer"/>
+    <fullyQualifiedTypeName name="ch02.ex02.quiz.quiz01Answer.Worker"/>
+    <fullyQualifiedTypeName name="ch02.ex02.quiz.quiz02.Worker"/>
+    <fullyQualifiedTypeName name="ch02.ex02.quiz.quiz02.Subway"/>
+    <fullyQualifiedTypeName name="ch02.ex02.quiz.quiz02.Bus"/>
+    <fullyQualifiedTypeName name="ch02.ex02.quiz.quiz02Answer.Subway"/>
+    <fullyQualifiedTypeName name="ch01.ex02.arrayList.case04.MemberArrayList"/>
+    <fullyQualifiedTypeName name="ch01.ex02.arrayList.case04.Member"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="ch01.ex02.quiz.case06Answer.ScoreService"/>
+    <fullyQualifiedTypeName name="ch01.ex02.quiz.case07.StudentService"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="ch01.ex02.quiz.case07.Student"/>
+    <fullyQualifiedTypeName name="ch03.ex01.case02.Ship"/>
+    <fullyQualifiedTypeName name="java.lang.SecurityException"/>
+    <fullyQualifiedTypeName name="java.sql.SQLClientInfoException"/>
+    <fullyQualifiedTypeName name="ch03.ex01.case03.Sequence"/>
+</qualifiedTypeNameHistroy>

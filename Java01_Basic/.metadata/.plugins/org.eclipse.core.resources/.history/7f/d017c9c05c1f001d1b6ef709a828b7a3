@@ -1,0 +1,17 @@
+package ch02.ex02.case02;
+
+public class Retailer {
+
+	private Farmer farmer;
+
+	public Farmer getFarmer() {
+		return farmer;
+	}
+
+	public void setFarmer(Farmer farmer) {
+		this.farmer = farmer;
+
+	}
+	
+	
+}

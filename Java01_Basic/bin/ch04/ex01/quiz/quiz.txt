@@ -1,0 +1,3 @@
+Q1.
+use scanner class, input int
+use if, 짝수인지홀수인지 구분해서 출력하기.

@@ -1,0 +1,13 @@
+package ch02.ex01.case01;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+
+		//생성자 (객체를 생성할 때)
+		Student s = new Student();
+		
+		s.showStudentInfo();
+	}
+
+}

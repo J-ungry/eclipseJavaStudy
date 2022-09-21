@@ -1,0 +1,16 @@
+package ch01.ex02.quiz.case05;
+
+public class BookMain {
+
+	public static void main(String[] args) {
+
+		BookService bs = new BookService();
+		Book[] b = new Book[bs.input()]; //책 권수 입력 
+		
+		while(true) {
+			int menu = bs.menu();
+		}
+		
+	}
+
+}

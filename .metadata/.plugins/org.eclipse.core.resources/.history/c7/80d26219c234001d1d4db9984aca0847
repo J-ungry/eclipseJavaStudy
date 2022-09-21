@@ -1,0 +1,24 @@
+package java_study.co.kr.joongbu.case01;
+
+class ObjectA{
+	String b = "ObjectA.a 입니동 ";
+}
+
+class ObjectB extends ObjectA{
+	String b = "ObjectB.b 입니동 ";
+}
+
+class ObjectC extends ObjectB{
+	String c = "ObjectC.c 입니동 ";
+}
+
+class ObjectC{}
+public class L05ExtendsAndType {
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

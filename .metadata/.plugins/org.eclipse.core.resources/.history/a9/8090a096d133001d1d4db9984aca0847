@@ -1,0 +1,5 @@
+package ch03.quiz.case04.domain;
+
+public class User {
+
+}

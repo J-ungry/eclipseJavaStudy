@@ -1,0 +1,5 @@
+package ch03.quiz.case03.dao;
+
+public interface UserInfoDao {
+
+}

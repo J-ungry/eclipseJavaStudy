@@ -1,0 +1,47 @@
+package ch02.ex02.case03.quiz;
+
+public class Worker {
+
+	private String name; 
+	private int money;
+	
+	public Worker(){
+		this("영수",20_000);
+	}
+	public Worker(String name,int money) {
+		this.name=name;
+		this.money = money;
+	}
+	public Taxi getTaxi(int price) {
+		Taxi taxi = new Taxi(); //카카오 객체 생성 
+		pay(taxi,price);
+		return new Taxi();
+	}
+	
+	public Taxi pay(Taxi taxi, int price) {
+		money -= price;
+		System.out.printf("%s 님의 잔액은 %d 원 입니다\n",name,money);
+		taxi.setMoney((taxi.getMoney()) +price); 
+		taxi.output();
+		return taxi;
+		
+	}
+	
+	
+	//getter/setter 
+	public String getName() {
+		return name;
+	}
+	public int getMoney() {
+		return money;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setMoney(int money) {
+		this.money = money;
+	}
+	
+	
+	
+}

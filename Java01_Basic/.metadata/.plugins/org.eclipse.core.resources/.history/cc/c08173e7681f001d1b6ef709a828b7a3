@@ -1,0 +1,22 @@
+package ch02.ex02.quiz.quiz02;
+
+public class Bus {
+
+	String busName;
+	int price;
+	int income;
+	
+	public Bus(String busName) {
+		this.busName = busName;
+		price = 2_000;
+		income = 0;
+	}
+	
+	public void take() {
+		income += price;
+		
+	}
+	public void showBusInfo() {
+		System.out.println(busName + "의 수입은 : "+income+"원 입니다 .\n");
+	}
+}

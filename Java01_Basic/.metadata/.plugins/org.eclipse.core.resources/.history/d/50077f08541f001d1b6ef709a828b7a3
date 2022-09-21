@@ -1,0 +1,15 @@
+package ch02.ex01.case02;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+
+		//생성자 (객체를 생성할 때)
+//		Student s = new Student();
+		
+		Student s2 = new Student(91714076, "Jungry", "Information Security");
+		
+		s2.showStudentInfo();
+	}
+
+}

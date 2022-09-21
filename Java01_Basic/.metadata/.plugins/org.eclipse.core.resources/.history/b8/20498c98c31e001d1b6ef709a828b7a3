@@ -1,0 +1,41 @@
+package ch01.ex02.quiz.case05;
+
+import java.util.Scanner;
+
+public class Book {
+
+	private String name;
+	private String author;
+	private int price;
+	
+	StringBuffer buffer = new StringBuffer();
+	Scanner sc = new Scanner(System.in);
+	
+	private void inputBook() {
+		System.out.print("Insert Book name >>");
+		name = sc.next();
+		buffer.append("###");
+		buffer.append(name);
+		buffer.append("###\n");
+		System.out.print("Insert Author name >>");
+		author = sc.next();
+		buffer.append("Author :");
+		buffer.append(author);
+		buffer.append("\n");
+		System.out.print("Insert Price >>");
+		price = sc.nextInt();
+		buffer.append("Price :");
+		buffer.append(price);
+		buffer.append("\n");
+		
+	}
+	
+	public void getBook() {
+		inputBook();
+		
+	}
+	
+	public String setBook() {
+		return buffer.toString();
+	}
+}

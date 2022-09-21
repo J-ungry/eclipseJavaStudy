@@ -1,0 +1,40 @@
+package ch03.quiz.project02.presentation.employee;
+
+import ch03.quiz.project02.domain.Employee;
+import ch03.quiz.project02.presentation.Console;
+import ch03.quiz.project02.service.EmployeeService;
+
+public class EmployeeIo {
+	
+	private EmployeeService employeeService;
+	private String[] empMenuItem;
+	//생성자 
+	public EmployeeIo(EmployeeService employeeService, String[] empMenuItem) {
+		this.employeeService = employeeService;
+		this.empMenuItem = empMenuItem;
+	}
+	
+	public void play() {
+		while(true) {
+			
+			switch(Console.menu(empMenuItem)) {
+			case 1:
+				Employee employee = new Employee();// 객체 생성 
+				
+				employeeService.addEmployee(employee); //생성한거 arrayList 에 넣기 
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+			case 4:
+				break;
+			case 0:
+				System.out.println("프로그램 종료");
+				return;
+			}
+		}
+
+	}
+
+}

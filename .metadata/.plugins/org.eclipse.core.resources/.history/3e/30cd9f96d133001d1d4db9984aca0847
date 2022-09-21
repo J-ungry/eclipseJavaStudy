@@ -1,0 +1,5 @@
+package ch03.quiz.case04.service.user;
+
+public class UserServiceImpl {
+
+}

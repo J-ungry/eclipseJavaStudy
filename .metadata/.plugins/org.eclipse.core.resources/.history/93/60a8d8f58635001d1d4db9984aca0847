@@ -1,0 +1,17 @@
+package java_study.co.kr.joongbu.case01;
+
+import java.util.function.Function;
+
+public class L13MethodReference {
+
+	public static void main(String[] args) {
+		//메소드 참조 (람다식을 한번 더 줄여서 작성)
+		
+		Function<String,Integer> ParseInt=(s) -> {return Integer.parseInt(s);};
+		Function<String,Integer> ParseInt2=s -> Integer.parseInt(s);
+		Function<String,Integer> ParseInt3=Integer::parseInt;
+		
+		System.out.println(ParseInt.apply("99")*3);
+	}
+
+}

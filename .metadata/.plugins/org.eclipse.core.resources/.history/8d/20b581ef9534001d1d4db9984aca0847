@@ -1,0 +1,9 @@
+package java_study.co.kr.joongbu.case01;
+
+public class InnerClass {
+
+	public static void main(String[]args) {
+		System.out.println("안녕 ! ");
+	}
+
+}

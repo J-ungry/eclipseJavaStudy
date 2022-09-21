@@ -1,0 +1,26 @@
+package ch01.ex01.case03;
+
+public class CircleTest {
+
+	public static void main(String[] args) {
+		//객체 생성
+		Circle mirror;
+		mirror = new Circle();
+		
+		//객체 활용 - 객체 멤버에 접근 
+		mirror.radius = 10;
+		mirror.name = "손거울";
+		double mirrorArea = mirror.getArea();
+		
+		System.out.printf("%s의 면적은 %.1f 입니다.",mirror.name,mirrorArea);
+		
+		Circle dounuts = new Circle();
+		dounuts.radius = 20;
+		dounuts.name = "크리스피 크림 오리지널 글레이즈드";
+		double dounutsArea = dounuts.getArea();
+		
+		System.out.printf("%s의 면적은 %.1f 입니다.",dounuts.name,dounutsArea);
+	}
+	
+
+}

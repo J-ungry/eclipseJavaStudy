@@ -1,0 +1,14 @@
+package ch01.ex01.quiz.case03;
+
+public class Student {
+/*이름 , 국어 , 영어 , 수학 점수를 입력 출력하는 메소드를 만들어 
+ * StudentMain 클래스에서 실행 
+ */
+	
+	String name;
+	int kor;
+	int eng;
+	int math;
+	
+	input(){}
+}

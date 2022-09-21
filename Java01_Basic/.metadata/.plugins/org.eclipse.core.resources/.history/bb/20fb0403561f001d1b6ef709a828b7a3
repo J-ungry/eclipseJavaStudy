@@ -1,0 +1,27 @@
+package ch02.ex01.case05;
+
+public class Man {
+//member variable
+	String name;
+	int age;
+	
+	//constructor
+	public Man() {
+		this("정구링",0);
+	}
+
+	public Man(String name, int age) {
+		super();
+		this.name = name;
+		this.age = age;
+	}
+	
+	public void showManInfo() {
+		System.out.printf("%s의 나이는 %d살 입니다. \n",name,age);
+	}
+	
+	public Man getMan() {
+		return this; //this는 객체 자신이다 (따라서 출력하면 자신의 주소를 반환한다)
+		
+	}
+}

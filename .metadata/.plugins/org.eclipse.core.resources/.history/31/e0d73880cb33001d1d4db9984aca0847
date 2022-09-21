@@ -1,0 +1,29 @@
+package ch03.quiz.case03.web;
+
+import java.util.Scanner;
+
+import ch03.quiz.case03.dao.UserInfoDao;
+import ch03.quiz.case03.dao.mysql.UserInterdaveMysqlDao;
+import ch03.quiz.case03.dao.oracle.UserInfoOracleDao;
+
+public class UserInfoClient {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("사용하실 DB 의 종류를 입력하세요 \n");
+		String db = sc.nextLine();
+		
+		UserInfoDao userInfoDao = null; //비어있는 인터페이스 
+		if(db.equals("oracle")) {
+			userInfoDao = new UserInfoOracleDao();
+		}else if(db.equals("mysql")) {
+			userInfoDao = new UserInterdaveMysqlDao();
+		}else {
+			System.out.println("DB support Error");
+			return;
+		}
+	}
+
+}

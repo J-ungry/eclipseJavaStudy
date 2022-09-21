@@ -1,0 +1,18 @@
+package ch02.ex02.case02;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Apple apple = new Apple();
+		
+		Farmer farmer = new Farmer();
+		farmer.getApple().setPrice(1000); //농부가 가격 설정 
+		
+		int farmerPrice = farmer.getApple().getPrice();
+		
+		Retailer retailer = new Retailer();
+		retailer.getFarmer().getApple().setPrice(farmerPrice*2);
+	}
+
+}

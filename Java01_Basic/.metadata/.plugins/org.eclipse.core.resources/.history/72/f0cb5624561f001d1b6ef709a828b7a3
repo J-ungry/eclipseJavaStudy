@@ -1,0 +1,11 @@
+package ch02.ex01.case05;
+
+public class ManMain {
+
+	public static void main(String[] args) {
+
+		Man m = new Man();
+		m.showManInfo();
+	}
+
+}

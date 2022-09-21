@@ -1,0 +1,35 @@
+package ch01.ex01.quiz.case04;
+
+import java.util.Scanner;
+
+public class Score {
+
+	Scanner sc = new Scanner(System.in);
+	
+	int menu() {
+		System.out.println("1. 입력 ");
+		System.out.println("2. 출력 ");
+		System.out.println("0. 프로그램 종료 ");
+		
+		int menuNum = sc.nextInt();
+		
+		return menuNum;
+	}
+	
+	void makeArr(int a) {
+		String name[] = new String[a];
+		int kor[] = new int[a];
+		int eng[] = new int[a];
+		int math[] = new int[a];
+		
+		
+	}
+	
+	
+	
+	void output() {
+		
+	}
+	
+	
+}

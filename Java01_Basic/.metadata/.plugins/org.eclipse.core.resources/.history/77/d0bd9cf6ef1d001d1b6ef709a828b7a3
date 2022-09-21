@@ -1,0 +1,10 @@
+package ch01.ex02.quiz.Case02;
+
+public class Drink {
+
+	String name;
+	int totalNum;
+	int totalPrice;
+	
+	
+}

@@ -1,0 +1,17 @@
+package ch01.ex02.quiz.case07;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+
+		StudentService ss = new StudentService();
+		Student[] s = new Student[3];
+		
+		int cnt = 0;
+		
+		while(true) {
+			int menu = ss.menu();
+		}
+	}
+
+}

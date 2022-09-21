@@ -1,0 +1,30 @@
+package java_study.co.kr.joongbu.case01;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class L15StreamAPIEx {
+
+	public static void main(String[] args) {
+
+		List<Integer> numList = new ArrayList<Integer>();
+		numList.add(500);
+		numList.add(55);
+		numList.add(5);
+		numList.add(null);
+		numList.add(555);
+		numList.add(1);
+		numList.add(3);
+		numList.add(-300);
+		
+		int sum =0 ;
+		for(int num : numList) {
+			sum+= num;
+			
+		}
+		
+		System.out.println(sum);
+		
+	}
+
+}

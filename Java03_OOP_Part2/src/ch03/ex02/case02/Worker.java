@@ -1,0 +1,15 @@
+package ch03.ex02.case02;
+
+public class Worker {
+
+	//field = 멤버변수 
+	final String COMPANY = "google";
+	String regNumber;
+	String name;
+	
+	//생성자
+	public Worker(String regNumber, String name) {
+		this.regNumber = regNumber;
+		this.name = name;
+	}
+}

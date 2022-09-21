@@ -1,0 +1,19 @@
+package ch03.quiz.project02.presentation.employee;
+
+import ch03.quiz.project02.service.EmployeeService;
+
+public class EmployeeIo {
+	
+	private EmployeeService employeeService;
+	private String[] empMenuItem;
+	//생성자 
+	public EmployeeIo(EmployeeService employeeService, String[] empMenuItem) {
+		this.employeeService = employeeService;
+		this.empMenuItem = empMenuItem;
+	}
+	
+	public void play() {
+		int num = Console.menu(empMenuItem);
+	}
+
+}

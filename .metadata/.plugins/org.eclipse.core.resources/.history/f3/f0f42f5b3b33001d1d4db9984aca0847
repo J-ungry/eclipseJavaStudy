@@ -1,0 +1,11 @@
+package ch03.quiz.case01;
+
+public interface StudentService {
+
+	int menu();
+	void input();
+	void output();
+	void modify();
+	void delete();
+	
+}

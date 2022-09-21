@@ -1,0 +1,14 @@
+package java_study.co.kr.joongbu.case01;
+
+import javax.swing.JFrame;
+
+public class L24TextEditor {
+
+	public static void main(String[] args) {
+
+		JFrame f = new JFrame();
+		f.setBounds(10,10,400,400);
+		f.setVisible(true);
+	}
+
+}

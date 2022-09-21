@@ -1,0 +1,13 @@
+package ch03.quiz.project02.dao;
+
+import java.util.ArrayList;
+
+import ch03.quiz.project02.domain.Employee;
+
+public interface EmployeeDao {
+	
+	void setEmployee(Employee employee); //직원 정보 입력하기 
+	ArrayList<Employee> getEmployees(); //직원 정보 가져오기 
+	
+
+}

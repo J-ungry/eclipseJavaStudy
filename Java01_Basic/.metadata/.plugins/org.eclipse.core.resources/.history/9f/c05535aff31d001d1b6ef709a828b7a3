@@ -1,0 +1,95 @@
+package ch01.ex02.quiz.Case02;
+
+import java.util.Scanner;
+
+public class DrinkMain {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("음료 메뉴 수량 > ");
+		int drinkNum = sc.nextInt();
+		
+		Drink drink[] = new Drink[drinkNum];
+		int price[] = new int[drinkNum];
+		
+		for(int i = 0; i<drinkNum;i++) {
+			System.out.print("음료 이름 입력 > ");
+			drink[i] = new Drink();
+			drink[i].name = sc.next();
+		}
+		for(int i=0; i<price.length; i++ ) {
+			System.out.printf("%s 의 가격 입력 > ",drink[i].name);
+			price[i] = sc.nextInt();
+		}
+		
+		boolean check = true;
+		
+		//현재 주문하는 애들 개수 
+		int nowOrder[] = new int[drinkNum];
+		
+		while(check) {
+			System.out.println("### 선택 ###");
+			System.out.println("1. 주문 ");
+			System.out.println("2. 결제 ");
+			System.out.println("3. 총 매출 현황 ");
+			System.out.println("0. 프로그램 종료  ");
+			System.out.print(">> ");
+			int menu = sc.nextInt();
+			
+			switch(menu) {
+			case 0:
+				check = false;
+				return;
+			case 1:
+				//화면에 메뉴 뿌려주기 
+				System.out.println("### 메뉴 ###");
+				for(int i=0; i<drink.length; i++) {
+					System.out.printf("%d. %s   가격 : %d\n",(i+1),drink[i].name,price[i]);
+				}
+				//메뉴 선택하기 
+				System.out.printf("메뉴 선택 > ");
+				int order = sc.nextInt();
+				System.out.printf("개수 입력 > ");
+				int count = sc.nextInt();
+				
+				nowOrder[order-1] += count;
+				break;
+				
+			case 2:
+				//결제 -> 어떤거 장바구니에 담겼는지 출력하기 
+				//담긴 애들 총 매출 현황 올려주기 
+				//장바구니 초기화 
+				System.out.println("### 결제 하기 ###");
+				//뿌려주기 
+				for (int i=0; i<drink.length;i++) {
+					System.out.printf("---%s---\n",drink[i].name);
+					System.out.printf("총 주문 수량 > %d\n",nowOrder[i]);
+					System.out.printf("총 주문 금액 > %d\n",price[i]*nowOrder[i]);
+					
+					drink[i].totalNum += nowOrder[i];
+					drink[i].totalPrice += price[i]*nowOrder[i];
+				}
+				
+				System.out.println("결제 완료 되었습니다.");
+				
+				//장바구니 초기화
+				for(int i=0;i<nowOrder.length;i++) {
+					nowOrder[i] = 0;
+				}
+				break;
+				
+			case 3:
+				System.out.println("### 매출 현황 ###");
+				for(int i=0; i<drink.length; i++) {
+					System.out.printf("---%s---\n",drink[i].name);
+					System.out.printf("총 판매 수량 : %d\n",drink[i].totalNum);
+					System.out.printf("총 판매 금액 : %d\n",drink[i].totalPrice);
+				}
+				
+				break;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,104 @@
+package java_study.co.kr.joongbu.case01;
+
+import java.util.ArrayList;
+
+//class 이름 규칙 : 파스칼 표기법 (이름을 표기할때 사용) , 숫자로 시작하면 안됨 
+//
+public class L01Variable {
+	//메소드 이름 규칙 : 카멜 표기법 , 숫자로 시작하면 안됨 
+	//메인 메소드 규칙 : public (어디서든 접근 가능) , static( 정적인 jvm(main) < jre 스택에서 참조됨) , void (반환되는게 없음 실행 자체가 반환이니까 ) , args (main이 실행될때 지정되는 기본값 )
+	public static void main(String[] args) { //파라미터(매개변수)
+		
+		String[] arr = {"a","b","c","d"}; //Array 배열 
+		System.out.println(arr.length);
+		System.out.println(arr.toString());//Object.toString() 객체의 주소 (객체에 대한 정보를 재정의 하기를 기대하는 함수) 
+		
+		//java.lang.Object : 모든 타입의 부모 (모든 객체의 부모) 모든 타입이 객체가 될 수 있는 정보를 포함 => class의 생성자를 new 연산자로 호출해 객체를 생성할수 있게 해준다 
+		ArrayList<String> list = new ArrayList<String>(); //List 배열 
+		list.add("a");
+		list.add("b");
+		list.add("c");
+		list.add("d");
+		
+		System.out.println(list.toString());
+		System.out.println(list.size());
+		System.out.println(list.contains("c"));
+		//Object.toString() -> List.toString(): 객체의 설명 
+		
+		L01Variable l01Variable = new L01Variable();
+		System.out.println(l01Variable); //toString 은 생략이 가능하다 
+
+	
+
+	//타입의 다형성 : 한 객체가 여러 타입에 참조 (한 객체가 여러 일을 하는 것) 
+	Object o ="안녕"; //o는 Object 타입의 객체만 참조 가능하다, 부모가 Object인 객체를 참조 가능 (타입의 다형성 => 형변환) 
+	
+	//0 전기적 신호가 있음 1 전기적 신호가 없음 
+	//2진수와 16진수 -> 1byte(8bit)
+	//메모리에서 가장 작은 단위 : 1비트 
+	// -+ (부호비트) 7bit로 2진수를 표기 2^0 2^1 2^2 . . . 2^6 =>수는 약속 
+	//5 : 4+1
+	
+	//부동소수점 실수
+	//0.005 => 5.0 * 10^-3
+	//5.0 : 가수부  => 첫번째 비트와 세번째 비트에 전기적 신호를 준다 
+	//10^-3 :지수부  => 지수부의 부호비트에 전기적 신호, 1+2 지수부의 첫번쨰 비트와 두번째 비트에 전기적 신호를 준다 
+	
+	byte b; // 1byte (8비트) 로 참조할 수 있는 정수 
+	short s; // 2byte ( 16bit) 로 참조할 수 있는 정수 
+	int i; // 변수 i 가 선언됨 (참조할 객체 타입을 명시) int : 기본형 정수 (4바이트) 로 참조할수 있는정수 (기본정수) 
+	long l; // 8바이트 
+	char c; //문자표(아스키코드,유니코드) 의 번호를 참조 
+	
+	i= 2147483647 + 2; //내가 표현할 수 있는 수보다 큰수를 참조하면 가장 작은 수부터 나머지를 더한다 
+	System.out.println("i : "+i);
+	
+	l = 9223372036854775807L + 1;
+	System.out.println("l : "+l);
+	
+	//실수를 참조하는 타입 
+	float f; //실수 (4byte) float 는오차가 많이 발생해서 
+	double d; //float가 작아서 8byte 로 표기 (기본실수) 
+	
+	System.out.println(13.33);//double 
+	System.out.println(13);
+	
+	f = 13; //13.0
+	System.out.println(f);
+	f = 13.1313131313131313f;
+	System.out.println(f); //13.131313 -> 계산할때 오차가 많이 발생한다 
+	f = 131234567890123456789f; //1.3123457E20
+	System.out.println(f); //내가 표현할 수 있는 수보다 참조하기 어려운 수는 Infinity 를 반환한다 
+	
+	
+	
+	d = 13.1234567890123456789;
+	System.out.println(d);
+	//자바스크립트의 Number 는 자바의 더블과 같다 .
+	
+	boolean bool = true; //true = 1 false =0;  => 원래는 1비트짜리 데이터인데 자바는 1바이트 -> 8비트 쓴다 왜냐면 자바는 메모리의 가장 작은 구성을 1바이트로 구성하고 있기 때문이다 / 나머지 7비트는 놀고있음 
+	
+	//상수 
+	final int INT; // 이름을 대문자로 적어야한다 
+	System.out.println(INT);
+	
+	
+	}
+	
+	//오버로드 : 메소드 이름이 같지만 매개변수가 다른 것 
+	public void print() {}
+	public void print(int i) {}
+	public void print(String s) {}
+	public void print(String s, String s2) {}
+	public void print(double d) {}
+	public void print(char c) {}
+	public void print(Object o) {}
+	public void print(float f) {}
+	
+	
+	@Override //object 가 보이지 않지만 상속되어있기 때문이다 , 부모의 필드를 재정의 하는 것 (다형성에 해당한다 다형성 ?: *면접단골  한개의 이름이 역할을 많이 갖는 것)
+	//자식은 부모의 모든 필드를 물려 받지만 재정의된 필드가 우선순위를 갖는다 
+	public String toString() {
+		return "변수에 대한 수업입니다"; 
+	}
+}

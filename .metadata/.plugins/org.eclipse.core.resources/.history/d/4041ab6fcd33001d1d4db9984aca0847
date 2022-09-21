@@ -1,0 +1,19 @@
+package ch03.quiz.case03.web;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+
+public class UserInfoClient2 {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		
+		FileInputStream fis = new FileInputStream("db.properties");
+		
+		Properties prop = new Properties();
+		
+		prop.getProperty("DBTYPE");
+		System.out.println(prop);
+	}
+
+}

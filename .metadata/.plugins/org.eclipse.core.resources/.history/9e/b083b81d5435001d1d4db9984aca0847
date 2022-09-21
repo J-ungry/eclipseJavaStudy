@@ -1,0 +1,17 @@
+package ch03.quiz.project02Answer.dao.employee;
+
+import java.util.List;
+
+import ch03.quiz.project02Answer.domain.Employee;
+
+public class EmployeeDaoImpl{
+	
+	private List<Employee> empList; //has-a
+	private int empIdSeq;		//사원 번호를 1씩 증가 
+	
+	public EmployeeDaoImpl(List<Employee> empList) {
+		this.empList = empList;
+		empIdSeq = 1;
+	}
+
+}

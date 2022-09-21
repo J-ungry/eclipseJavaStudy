@@ -1,0 +1,26 @@
+package java_study.co.kr.joongbu.case01;
+
+import java.util.function.BiFunction;
+import java.util.function.Function;
+
+public class L12Lambda {
+
+	public static void main(String[] args) {
+		//Javascript(함수형언어, 프로토타입 언어)  람다식 : function(){} 프로토타입(타입) class(문법적 설탕==function), () =>{} 람다식 함수 (타입이 존재하지 않는)
+		//function Sum(a,b) {this.a=a; this.b=b; this.sum = function(){}} let calc = new Calc();
+		
+		Function<Integer,Long> square=(i)->{return (long)i*i;}; //매개변수가 인티저고 리턴이 롱인 애를 받아야함 
+		Function<Integer,Long> square2 = new Function<Integer,Long>() {
+
+			@Override
+			public Long apply(Integer t) {
+				long result = t*t;
+				return result;
+			}
+		};
+		
+		BiFunction<Integer,Integer,Long> sum=(i,i2)->{return (long)(i+i2);}; //매개변수가 두개있고 리턴이 존재하는 애 
+		System.out.println(sum.apply(40, 200));
+	}
+
+}

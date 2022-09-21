@@ -1,0 +1,46 @@
+package ch01.ex02.quiz.case06Answer;
+
+import java.util.Scanner;
+
+
+public class ScoreService {
+
+	Scanner sc = new Scanner(System.in);
+	
+	public int menu() {
+		System.out.println("1. 입력");
+		System.out.println("2. 출력");
+		System.out.println("3. 수정");
+		System.out.println("4. 삭제");
+		System.out.println("0. 프로그램 종료");
+		System.out.print("선택 >> ");
+		int num = sc.nextInt();
+		return num;
+	}
+
+	public int input(int cnt, Score[] s) {
+		if(cnt == 3) {
+			System.out.println("더이상 저장할 수 없습니다");
+		} else {
+			s[cnt] = new Score();
+			System.out.print("이름 입력 >> ");
+			s[cnt].name = sc.next();
+			System.out.print("점수 입력 >> ");
+			s[cnt].score = sc.nextInt();
+			cnt ++;
+		}
+		return cnt;
+	}
+	
+	public void output(int cnt, Score[] s) {
+		System.out.println(cnt);
+		if(cnt ==0) {
+			System.out.println("출력 할 내용이 없습니다");
+		} else {
+			for(int i=0; i<cnt; i++) {
+				System.out.println("이름 : "+s[i].name);
+				System.out.println("점수 : "+s[i].score);
+			}
+		}
+	}
+}

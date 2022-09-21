@@ -1,0 +1,18 @@
+package ch01.ex01.case05;
+
+import ch01.ex01.quiz.case03.StudentAnswer;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		
+		StudentAnswer s[] = new StudentAnswer[3]; //[0] [1] [2]
+		
+		s[0] = new StudentAnswer();
+		s[0].input();
+		s[0].output();
+		
+		
+	}
+
+}

@@ -1,0 +1,37 @@
+package java_study.co.kr.joongbu.case01;
+
+import java.util.ArrayList;
+
+//class 이름 규칙 : 파스칼 표기법 (이름을 표기할때 사용) , 숫자로 시작하면 안됨 
+//
+public class L01Variable {
+	//메소드 이름 규칙 : 카멜 표기법 , 숫자로 시작하면 안됨 
+	//메인 메소드 규칙 : public (어디서든 접근 가능) , static( 정적인 jvm(main) < jre 스택에서 참조됨) , void (반환되는게 없음 실행 자체가 반환이니까 ) , args (main이 실행될때 지정되는 기본값 )
+	public static void main(String[] args) { //파라미터(매개변수)
+		
+		String[] arr = {"a","b","c","d"}; //Array 배열 
+		System.out.println(arr.length);
+		System.out.println(arr.toString());//Object.toString() 객체의 주소 (객체에 대한 정보를 재정의 하기를 기대하는 함수) 
+		
+		//java.lang.Object : 모든 타입의 부모 (모든 객체의 부모) 모든 타입이 객체가 될 수 있는 정보를 포함 => class의 생성자를 new 연산자로 호출해 객체를 생성할수 있게 해준다 
+		ArrayList<String> list = new ArrayList<String>(); //List 배열 
+		list.add("a");
+		list.add("b");
+		list.add("c");
+		list.add("d");
+		
+		System.out.println(list.toString());
+		System.out.println(list.size());
+		System.out.println(list.contains("c"));
+		//Object.toString() -> List.toString(): 객체의 설명 
+		
+		L01Variable l01Variable = new L01Variable();
+		System.out.println(l01Variable); //toString 은 생략이 가능하다 
+
+	}
+
+	@Override //object 가 보이지 않지만 상속되어있기 때문이다 
+	public String toString() {
+		return "변수에 대한 수업입니다"; 
+	}
+}

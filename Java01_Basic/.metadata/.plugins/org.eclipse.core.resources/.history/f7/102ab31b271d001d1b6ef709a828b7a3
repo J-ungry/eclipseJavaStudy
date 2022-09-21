@@ -1,0 +1,10 @@
+package ch05.quiz;
+
+public class A03CountOfNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

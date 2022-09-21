@@ -1,0 +1,12 @@
+package ch03.quiz.project02.service;
+
+import java.util.ArrayList;
+
+import ch03.quiz.project02.domain.Employee;
+
+public interface EmployeeService {
+	
+	void addEmployee(Employee employee);
+	ArrayList<Employee> getEmployees();
+	
+}

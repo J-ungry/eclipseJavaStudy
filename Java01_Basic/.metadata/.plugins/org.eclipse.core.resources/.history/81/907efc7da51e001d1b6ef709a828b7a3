@@ -1,0 +1,7 @@
+package ch01.ex02.quiz.Case03Answer;
+
+public class Group {
+	String name ; 
+	int inwon ;
+	String song;
+}

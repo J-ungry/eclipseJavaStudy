@@ -1,0 +1,24 @@
+package ch01.ex01.quiz.case04;
+
+import java.util.Scanner;
+
+public class ScoreMain {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		Score score = new Score();
+		
+		System.out.print("인원 수 입력 > ");
+		int person = sc.nextInt();
+		
+		score.makeArr(person);
+		
+		for(int i=0; i<score.eng.length; i++) {
+			System.out.println(score.eng[i]);
+		}
+		
+		
+	}
+
+}

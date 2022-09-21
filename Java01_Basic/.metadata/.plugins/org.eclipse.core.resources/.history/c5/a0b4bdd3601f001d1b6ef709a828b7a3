@@ -1,0 +1,17 @@
+package ch02.ex02.case03.quiz;
+
+public class Taxi {
+
+	private String name;
+	private int money;
+	
+	public Taxi() {
+		this("카카오",0);
+	}
+	public Taxi(String name,int money) {
+		this.name= name;
+		this.money = money;
+	}
+	
+	
+}

@@ -1,0 +1,17 @@
+package ch03.ex01.case01;
+
+public class CardMain {
+
+	public static void main(String[] args) {
+
+		Card c1 = new Card();
+		c1.shape = "heart";
+		c1.number = 7;
+		c1.width = 5;
+		c1.height = 10; //접근은 가능 하지만 
+		
+		System.out.printf(c1.shape,c1.number,c1.width,c1.height);
+		
+	}
+
+}

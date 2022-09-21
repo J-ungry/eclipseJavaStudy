@@ -1,0 +1,18 @@
+package ch02.ex02.case02;
+
+import java.util.Scanner;
+
+public class Farmer {
+
+	private Apple apple;
+
+	public Apple getApple() {
+		return apple;
+	}
+
+	public void setApple(Apple apple) {
+		this.apple = apple;
+	}
+	
+	
+}

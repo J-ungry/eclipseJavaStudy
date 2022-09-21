@@ -1,0 +1,26 @@
+package ch02.ex02.quiz.quiz02;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Worker a = new Worker("A");
+		Worker b = new Worker("B");
+		
+		Subway no1 = new Subway("1");
+		
+		Bus no400 = new Bus("400");
+		Bus no500 = new Bus("500");
+		
+		b.takeBus(no500);
+		a.showWorkerInfo();
+		b.showWorkerInfo();
+		
+		no1.showBusInfo();
+		
+		no400.showBusInfo();
+		no500.showBusInfo();
+		
+	}
+
+}

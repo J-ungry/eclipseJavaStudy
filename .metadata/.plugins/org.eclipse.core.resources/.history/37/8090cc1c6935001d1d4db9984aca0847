@@ -1,0 +1,17 @@
+package java_study.co.kr.joongbu.case01;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class L11Swing {
+
+	public static void main(String[] args) {
+		//JFrame Swing GUI를 제공하는 객체 
+		JFrame frame = new JFrame();
+		JButton btn = new JButton("버튼 component");
+		frame.add(btn);
+		frame.setBounds(100,100,300,100);
+		frame.setVisible(true);
+	}
+
+}

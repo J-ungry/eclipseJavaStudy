@@ -1,0 +1,10 @@
+package ch03.ex01.case03;
+
+public class SequenceMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

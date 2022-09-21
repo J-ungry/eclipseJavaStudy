@@ -1,0 +1,38 @@
+/*
+ * 수의 예 : [12,25,31,48,54,66,70,83,95,108]
+ * 정렬된 숫자 중에서 83의 위치를 찾아보세요 
+ */
+package ch05.quiz;
+
+public class A04BinarySearch {
+	
+	
+
+	public static void main(String[] args) {
+		int arr[] = {12,25,31,48,54,66,70,83,95,108};
+		System.out.println(binarySearch(83,0,arr.length-1,arr));
+		
+		
+	}
+	public static int binarySearch(int key, int low, int high ,int arr[]) {
+		int mid; //중간 값
+		
+		while(low <= high) {
+			mid = (low+high) /2; //중간값 지정
+			
+			if(key == arr[mid]) {
+				return mid;
+			} else if (key < arr[mid]) {
+				high = mid -1;
+				
+			} else {
+				low = mid + 1;
+			}
+			
+			
+		}
+		return -1;
+		
+	}
+
+}

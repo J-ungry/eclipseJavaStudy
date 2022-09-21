@@ -1,0 +1,16 @@
+package ch01.ex02.quiz.Case03;
+
+import java.util.Scanner;
+
+public class GroupMain {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int groupCnt = sc.nextInt();
+		
+		Group[] g = new Group[groupCnt];
+		
+	}
+
+}
